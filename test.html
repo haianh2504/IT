@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="test.css" />
+        <style>
+            #test {
+                display: flex;
+                width: 100%;
+            }
+            #test img {
+                width: 100%;
+                display: block;
+                height: 100vh;
+            }
+            .left-corner {
+                width: 100%;
+                background-image: url("https://assets.teenvogue.com/photos/5b99161687032e636ebfe053/master/pass/tout.jpg");
+                height: 80vh;
+                background-size: cover;
+            }
+            .right-corner {
+                width: 80%;
+            }
+            .inner {
+                text-align: center;
+                padding-top: 20%;
+            }
+            /* From Uiverse.io by vinodjangid07 */
+            .Btn-Container {
+                margin-left: 35%;
+                display: flex;
+                justify-content: center;
+                width: 170px;
+                height: fit-content;
+                background-color: #1d2129;
+                border-radius: 40px;
+                box-shadow: 0px 5px 10px #bebebe;
+                justify-content: space-between;
+                align-items: center;
+                border: none;
+                cursor: pointer;
+            }
+            .icon-Container {
+                width: 45px;
+                height: 45px;
+                background-color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 3px solid #000000;
+            }
+            .icon-Container:hover {
+                background-color: rgb(128, 128, 128);
+            }
+            .text {
+                width: calc(170px - 45px);
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.1em;
+                letter-spacing: 1.2px;
+            }
+            .icon-Container svg {
+                transition-duration: 1.5s;
+            }
+            .Btn-Container:hover .icon-Container svg {
+                transition-duration: 1.5s;
+                animation: arrow 1s linear infinite;
+            }
+            @keyframes arrow {
+                0% {
+                    opacity: 0;
+                    margin-left: 0px;
+                }
+                100% {
+                    opacity: 1;
+                    margin-left: 10px;
+                }
+            }
+            .background {
+                width: 100%;
+                height: 100vh;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            /* navigation */
+            /* navigation */
+            .navigation {
+                width: 100%;
+                background-color: transparent;
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                align-items: center;
+                height: 50px;
+                padding-top: 2%;
+                z-index: 1000000;
+            }
+
+            .logo h1 {
+                color: transparent;
+                text-decoration: none;
+                font-family: "Candles Regular", sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+            }
+            .options {
+                display: flex;
+            }
+            .options ul {
+                list-style: none;
+                width: 100%;
+                display: flex;
+                padding-top: 2%;
+            }
+            .options ul li {
+                display: inline-block;
+                width: 100px;
+            }
+            .hover {
+                text-decoration: none;
+                color: white;
+                position: relative;
+            }
+            .hover:after {
+                content: "";
+                background-color: rgb(224, 6, 6);
+                position: absolute;
+                height: 2px;
+                left: 0;
+                width: 0;
+                bottom: -10px;
+                transition: 0.3s;
+                z-index: 10000;
+            }
+            .hover:hover:after {
+                width: 100%;
+            }
+
+            #ticket {
+                border: solid 1px rgb(143, 1, 1);
+                background-color: rgb(144, 4, 4);
+                color: white;
+                animation: TICKET;
+                transition-duration: 0.5s;
+                animation-duration: 4s;
+            }
+            @keyframes TICKET {
+                from {
+                    transform: scale(1);
+                }
+                to {
+                    transform: scale(1.05);
+                }
+            }
+            .joinus {
+                outline: solid 1px rgb(255, 255, 255);
+                background-color: transparent;
+                color: white;
+            }
+            .joinus:hover {
+                outline: solid 1px rgb(111, 0, 0);
+                background-color: rgb(125, 5, 5);
+                color: white;
+            }
+            /* display user */
+            .hidden {
+                display: none;
+            }
+            /*  background */
+            .background {
+                background-image: url("https://media.gq.com/photos/5d6ee1558e1da70008fd6136/16:9/w_2560%2Cc_limit/GQ-IT20-0903.jpg");
+                background-size: cover;
+                background-position: 50% 50%;
+                width: 100%;
+                height: 130vh;
+                display: flex;
+            }
+            .title {
+                position: relative;
+                width: 40%;
+                left: 30%;
+                display: flex;
+                top: 20%;
+                justify-content: center;
+            }
+            .tren {
+                text-align: center;
+            }
+            .tren h1 {
+                color: white;
+            }
+            .duoi {
+                text-align: center;
+            }
+            .duoi p {
+                color: #fcf4f4;
+            }
+            .title-moving {
+                animation: title-moving;
+                animation-timeline: view();
+            }
+            @keyframes title-moving {
+                from {
+                    transform: translateY(100px);
+                }
+                to {
+                    transform: translateY(0px);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <header>
+                <div class="navigation">
+                    <div class="logo d-flex">
+                        <h1 style="letter-spacing: 2px; color: rgb(255, 255, 255)">PENNY</h1>
+                        <h1 style="letter-spacing: 2px; color: rgb(214, 3, 3)">WISE 2</h1>
+                    </div>
+                    <div class="options">
+                        <ul>
+                            <li><a class="hover" href="#">Home</a></li>
+                            <li><a class="hover" href="#">About</a></li>
+                            <li><a class="hover" href="#">Service</a></li>
+                            <li><a class="hover" href="#">Contact</a></li>
+                            <li><a class="hover" href="review.html">Review</a></li>
+                        </ul>
+                    </div>
+                    <div class="attendance d-flex">
+                        <div class="dropdown hidden">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="nguoidung" data-bs-toggle="dropdown" aria-expanded="false">Username</button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="Profile.html">My Profile</a></li>
+                                <li><a class="dropdown-item" id="signout" href="#">Sign Out</a></li>
+                            </ul>
+                        </div>
+                        <a href="register.html" class="btn joinus">Join Us</a>
+                    </div>
+                </div>
+            </header>
+        </header>
+        <div class="background">
+            <div class="title">
+                <div class="tiny-container title-moving">
+                    <div class="tren">
+                        <h1 class="chudep">IT</h1>
+                        <h1 class="chudep">CHAPTER TWO</h1>
+                    </div>
+                    <div class="duoi">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, vitae totam. Voluptatum explicabo hic nulla aliquid iste sint ullam eveniet perspiciatis accusamus, da impedit corrupti.
+                            Quidem, quas laudantium!
+                        </p>
+                        <a href="#" id="ticket" class="btn mt-3">Preservation!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="test">
+            <div class="right-corner">
+                <div class="inner">
+                    <h3>From The Last Season</h3>
+                    <h5>--Alliance--</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eum, vel consequuntur at hic suscipit sequi mollitia eligendi, vitae, labore animi cupiditate fugit sapiente consequatur optio
+                        molestias odio numquam magnam.
+                    </p>
+
+                    <button class="Btn-Container">
+                        <span class="text">let's go!</span>
+                        <span class="icon-Container">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="left-corner"></div>
+        </div>
+        <div class=""></div>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>
