@@ -8,11 +8,7 @@ document.addEventListener("DOMContentLoaded", function (a) {
             console.log(user);
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/v8/firebase.User
-            Swal.fire({
-                icon: "success",
-                title: "Enjoy our service!",
-                text: "Have a good experience!",
-            });
+
             var uid = user.uid;
             joinus.classList.add("hidden");
             profile.classList.remove("hidden");

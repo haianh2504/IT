@@ -37,4 +37,5 @@ document.getElementById("nutdangbai").addEventListener("click", function (displa
     posts.push(newPost);
     localStorage.setItem("posts", JSON.stringify(posts));
     // call out the displayed container
+   
 });

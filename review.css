@@ -161,7 +161,8 @@ body {
 #Depicts-container {
     color: white;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    row-gap: 2%;
+    grid-template-columns: auto auto auto auto auto ;
 }
 #Depicts-container .avatar {
     width: 15%;
